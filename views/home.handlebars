@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/portal/responsive.css">
+    <title>Home</title>
+</head>
+<body class="body-login">
+    <header class="header">
+        <img class="header-img" src="/img/logoJFB.png" alt="">
+        <button class="navbar-button-painel" id="caduserOpen" onclick="menu()" type="button"><img class="navbar-img" src="/img/botaomenu.png" alt=""></button>
+    </header>
+
+    <aside class="menu" id="menu">
+        <ul class="navbar-options">
+            <li><a href="/alunos"><button class="navbar-button"><img class="navbar-img" src="/img/matricular.png" alt="">Matriculas Ativas</button></a></li>
+            <li><button class="navbar-button" id="cadOpen" onclick="abrirModalAluno()"><img class="navbar-img" src="/img/adicionar-ficheiro.png" alt="">Nova Matricula</button></li>
+            <li><a href="/"><button class="navbar-button"><img class="navbar-img" src="/img/sair.png" alt="">Sair do sistema</button></a></li>
+        </ul>
+    </aside>
+    
+    
+    <div class="registros-group">
+        <button id="mobile-button" onclick="abrirMenu()"><img class="menu-mobile-img" src="/img/list.png" alt=""></button>
+        <input class="registros-search" id="searchbar" placeholder="Buscar por Nome..."/>
+    </div>
+
+    <div class="registros-mat">
+        <table id="tabela" class="table">
+            <thead>
+                <tr>
+                    <th>Matricula</th>
+                    <th class="table-th-nome">Nome</th>
+                    <th>CPF</th>
+                    <th>Nascimento</th>
+                    <th>Naturalidade</th>
+                    <th>Curso</th>
+                    <th>Turma</th>
+                    <th>Turno</th>
+                    <th>Módulo</th>
+                    <th colspan="2">Opções</th>
+                </tr>
+            </thead>
+        
+            <tbody>
+                {{#each posts}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{nome}}</td>
+                        <td>{{cpf}}</td>
+                        <td>{{nasc}}</td>
+                        <td>{{naturalidade}}</td>
+                        <td>{{curso}}</td>
+                        <td>{{turma}}</td>
+                        <td>{{turno}}</td>
+                        <td>{{modulo}}</td>
+                        <td class="td-button">
+                            <a href="/alunos/editar/{{id}}"><button class="registros-button">Editar</button></a> 
+                        </td>
+                        <td class="td-button">
+                            <a href="/alunos/finalizar/{{id}}"><button class="registros-button">Encerrar</button></a>
+                        </td>
+                    </tr>			
+                {{/each}}
+            </tbody>
+        </table>                
+    </div>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="/js/main.js"></script>    
+</body>
+</html>
+
+
+

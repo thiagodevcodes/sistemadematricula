@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Matricula</title>
+</head>
+<body>
+    <div class="aluno-update">
+        <div class="aluno-update-content">
+            <header class="modal-header">
+                <img src="/img/logoJFB.png" class="modal-img" alt="">
+                <h2>Editar Matricula</h2>
+            </header>
+            <form action="/alunos/editar/{{id}}" method="POST" class="modal-form">
+                <input class="modal-field" placeholder="Nome" type="text" name="nome" value="{{nome}}" required/> 
+                <input class="modal-field" placeholder="CPF" type="text" name="cpf" value="{{cpf}}" required/> 
+                <input class="modal-field" placeholder="Nascimento" type="date" name="nasc" value="{{nasc}}" required/>
+                <input class="modal-field" placeholder="Cidade/Estado" type="text" name="naturalidade" value="{{naturalidade}}" required/>
+                <input class="modal-field" placeholder="Curso" type="text" name="curso" value="{{curso}}" required/>
+                <input class="modal-field" placeholder="Turma" type="text" name="turma" value="{{turma}}" required/>
+                <input class="modal-field" placeholder="Turno" type="text" name="turno" value="{{turno}}" required/>
+                <input class="modal-field" placeholder="Módulo" type="text" name="modulo" value="{{modulo}}" required/>
+                <div class="modal-buttons">
+                    <button class="button green" type="submit">Enviar</button>
+                    <a class="update-link" href="/alunos"><button type="button" class="button green">Voltar</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+    
+

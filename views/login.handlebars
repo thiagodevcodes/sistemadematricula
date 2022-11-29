@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="login">
+        <div class="login-content">
+            <header class="modal-header">
+                <img src="/img/account.png" class="user-img" alt="">
+    
+            </header>
+            <form action="/auth" method="POST" class="modal-form">
+                <input class="modal-field" placeholder="Login" type="text" name="login" id="loginAcess" required/> 
+                <input class="modal-field" placeholder="Senha" type="password" name="senha" required/>
+                
+                <div class="login-buttons">
+                    <button class="button green" type="submit">Entrar</button>
+                    <a class="login-link" href="/"><button class="button green" type="button">Voltar</button></a>
+                    <a class="login-link" href="/usuario/atualizar">Esqueceu a senha?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+

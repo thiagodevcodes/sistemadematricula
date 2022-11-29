@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Usuario</title>
+</head>
+<body>
+    <div class="login">
+        <div class="login-content">
+            <header class="login-header">
+                <img src="/img/logoJFB.png" class="modal-img" alt="">
+                <h2>Login</h2>
+            </header>
+            <form action="/usuario/alterarsenha" method="POST" class="modal-form">
+                <input class="modal-field" placeholder="Login" type="text" name="login" required/> 
+                <input class="modal-field" placeholder="Senha" type="password" name="senha" required/>
+                <input class="modal-field" placeholder="Confirmação de senha" type="password" name="confirm" required/>
+                    
+                <div class="login-buttons">
+                    <button  class="button green" type="submit">Entrar</button>
+                    <a class="login-link" href="/"><button class="button green" type="button">Voltar</button></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
