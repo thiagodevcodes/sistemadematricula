@@ -9,16 +9,8 @@
     list-style-type: none;
 }
 
-#mobile-button {
-    display: none;
-}
-
-#mobile-fechar {
-    display: none;
-}
-
 :root{
-    --primary-color: #9e0000;
+    --primary-color: #23232e;
     --secundary-color: #FFF1CC;
     --shadow-color: #CCC;
     --text-color: #FFF;

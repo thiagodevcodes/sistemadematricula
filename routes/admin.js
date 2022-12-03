@@ -45,7 +45,7 @@ let userativo = {
             if(acess.sucess == true) {
                 res.redirect("/alunos") 
             } else {
-                res.redirect("/login")
+                res.redirect("/")
             }
         }).catch( () => {
             res.send("Not Found")
@@ -231,6 +231,11 @@ let userativo = {
         }).catch( () => {
             res.send("Not Found")
         });
+    })
+
+
+    router.get("/teste" , async(req, res) => {
+        res.send(await Usuario.prototype.mostrarUsuario(1))
     })
 
 module.exports = router;

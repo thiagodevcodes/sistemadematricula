@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
-const admin = require("./routes/admin");
 const handlebars = require("express-handlebars");
+const admin = require("./routes/admin");
 
 //Config
     //Template Engine
@@ -12,7 +12,8 @@ const handlebars = require("express-handlebars");
         allowProtoMethodsByDefault: true
     }}));
     app.set("view engine", "handlebars");
-    //Body Parser 
+
+   //Body Parser 
     app.use(bodyParser.urlencoded({extended: false}));
     app.use(bodyParser.json());
     //Public
@@ -20,8 +21,6 @@ const handlebars = require("express-handlebars");
 
 //Rotas 
     app.use("/", admin);
-
-
 
 //Server
 const port = 8081

@@ -8,23 +8,25 @@
     <title>Home</title>
 </head>
 <body class="body-login">
-    <header class="header">
-        <img class="header-img" src="/img/logoJFB.png" alt="">
-        <button class="navbar-button-painel" id="caduserOpen" onclick="menu()" type="button"><img class="navbar-img" src="/img/botaomenu.png" alt=""></button>
+    <header>
+      <nav>
+        <a class="logo" href="/">Tiger Codes</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Projetos</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <aside class="menu" id="menu">
-        <ul class="navbar-options">
-            <li><a href="/alunos"><button class="navbar-button"><img class="navbar-img" src="/img/matricular.png" alt="">Matriculas Ativas</button></a></li>
-            <li><button class="navbar-button" id="cadOpen" onclick="abrirModalAluno()"><img class="navbar-img" src="/img/adicionar-ficheiro.png" alt="">Nova Matricula</button></li>
-            <li><button class="navbar-button" id="caduserOpen" onclick="abrirModalUser()" type="button"><img class="navbar-img" src="/img/caduser.png" alt=""> Cadastrar Usuário</button></li>
-            <li><a href="/usuarios"><button class="navbar-button"><img class="navbar-img" src="/img/matricular.png" alt="">Usuários Ativos</button></a></li>       
-            <li><a href="/"><button class="navbar-button"><img class="navbar-img" src="/img/sair.png" alt="">Sair do sistema</button></a></li>
-        </ul>
-    </aside>
-
      <div class="registros-group">
-        <button id="mobile-button" onclick="abrirMenu()"><img class="menu-mobile-img" src="/img/list.png" alt=""></button>
+        
         <input class="registros-search" id="searchbar" placeholder="Buscar por Nome..."/>
     </div>
 
@@ -70,6 +72,7 @@
     </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="/js/main.js"></script>    
+    <script src="/js/mobile-navbar.js"></script>  
 </body>
 </html>
 
